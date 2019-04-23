@@ -6,7 +6,7 @@ appConfig.env = "dev";
 
 // config your local mongodb uri
 appConfig.db = {
-     uri: 'mongodb://127.0.0.1:27017/demoDB',
+     uri: 'mongodb://127.0.0.1:27017/demoDB1',
 }
 
 module.exports = {
