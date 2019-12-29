@@ -9,17 +9,6 @@ const app = express();
 app.use(bodyParser.json()); 
 // allow application/x-www-form-urlencoded conten-type body data in http request
 
-app.all('*', (req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
-    if ('OPTIONS' == req.method) {
-        res.sendStatus(200);
-    }
-    else {
-        next();
-    }
-});
 
 //import routes
 let route = require('./app/routes/employeeRoutes');
